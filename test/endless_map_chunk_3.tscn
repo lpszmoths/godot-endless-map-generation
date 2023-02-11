@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://test/endless_map_obstacle.tscn" type="PackedScene" id=1]
+[ext_resource path="res://endless_map_generator/prefabs/endless_map_chunk_generator_2d.tscn" type="PackedScene" id=2]
+[ext_resource path="res://test/endless_map_random_chunk_spawner.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 256, 128 )
+
+[node name="MapChunk3" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, -32 )
+rotation = 1.5708
+
+[node name="StaticBody2D2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, -96 )
+rotation = 1.5708
+
+[node name="StaticBody2D3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, -160 )
+rotation = 1.5708
+
+[node name="StaticBody2D4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, -288 )
+rotation = 1.5708
+
+[node name="StaticBody2D5" parent="." instance=ExtResource( 1 )]
+position = Vector2( -160, -32 )
+rotation = -1.5708
+
+[node name="StaticBody2D6" parent="." instance=ExtResource( 1 )]
+position = Vector2( -288, -480 )
+
+[node name="StaticBody2D7" parent="." instance=ExtResource( 1 )]
+position = Vector2( -160, -480 )
+
+[node name="StaticBody2D8" parent="." instance=ExtResource( 1 )]
+position = Vector2( -224, -480 )
+
+[node name="StaticBody2D9" parent="." instance=ExtResource( 1 )]
+position = Vector2( -32, -384 )
+
+[node name="StaticBody2D10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, -256 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="StaticBody2D11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 64, -384 )
+scale = Vector2( 2, 2 )
+
+[node name="StaticBody2D12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, -480 )
+
+[node name="StaticBody2D13" parent="." instance=ExtResource( 1 )]
+position = Vector2( -224, -608 )
+scale = Vector2( 3, 3 )
+
+[node name="StaticBody2D14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 288, -96 )
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+
+[node name="EndlessMapChunkPlaceholder" parent="." instance=ExtResource( 2 )]
+position = Vector2( -320, -320 )
+rotation = -1.5708
+scene_to_generate = ExtResource( 3 )
+spawn_scene_this_many_levels_above_placeholder = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="EndlessMapChunkPlaceholder"]
+position = Vector2( 0, -128 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D15" parent="." instance=ExtResource( 1 )]
+position = Vector2( -288, -160 )
+rotation = -3.14159
+
+[node name="StaticBody2D16" parent="." instance=ExtResource( 1 )]
+position = Vector2( -256, -64 )
+rotation = -3.14159
+scale = Vector2( 2, 2 )
+
+[node name="StaticBody2D17" parent="." instance=ExtResource( 1 )]
+position = Vector2( -64, -480 )
+scale = Vector2( 2, 2 )
+
+[node name="StaticBody2D18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160, -352 )
+rotation = 1.5708
