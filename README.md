@@ -6,7 +6,6 @@ A simple system made up of two components:
 
 * **Chunk generator:** An `Area2D` that instances a given scene when a **trigger** collides with it.
 * **Trigger:** An `Area2D` that triggers any chunk generators it comes in contact with.
-* **Chunk scene:** A premade scene that represents one area in the level, such as a room in a roguelike, a track section in a racing game, a screen's worth of content in an endless runner, etc. When the generator is triggered, it will create an instance of the chunk scene in its place. This instance will have the same `global_transform` as the chunk generator itself.
 
 ## Usage
 
